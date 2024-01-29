@@ -3,10 +3,12 @@ import Speaker from "/public/speaker.svg";
 import Twitter from "/public/twitter.svg";
 import Github from "/public/github.svg";
 import Linkedin from "/public/linkedin.svg";
-import Mail from "/public/mail.svg";
+
 import Link from "next/link";
+import EmailForm from "@/components/EmailForm";
 
 export default function Home() {
+
   return (
     <section className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2">
       <div className="max-w-screen-lg mx-auto relative border-[1.5px] border-[#F0E4D2]">
@@ -25,32 +27,13 @@ export default function Home() {
           </div>
           {/* Form */}
           <div>
-            <form action="" className="flex gap-2">
-              <div className="relative">
-                <label
-                  htmlFor="email"
-                  className="absolute inset-y-0 left-0 pl-2.5 flex items-center"
-                >
-                  <Image src={Mail} alt="mail"/>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Join our waiting list..."
-                  className="lg:w-[300px] py-1.5 px-2.5 rounded-md text-base border border-[#D0D5DD] pl-8"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-black text-white px-2.5 py-1.5 rounded-md text-base transition-all duration-200 hover:bg-black/60"
-              >
-                Subscribe
-              </button>
-            </form>
+            <EmailForm/>
             <p className="text-[#B1ACA4] text-[12px] text-center mt-2">
               we care about your data in our{" "}
-              <Link href="/privacy-policy" className="underline transition-all duration-200 hover:text-black/70">
+              <Link
+                href="/privacy-policy"
+                className="underline transition-all duration-200 hover:text-black/70"
+              >
                 privacy policy
               </Link>
             </p>
