@@ -4,44 +4,40 @@ import {
   Head,
   Html,
   Img,
-  Link,
   Preview,
   Section,
   Text,
 } from "@react-email/components";
 
 export const EmailTemplate = () => {
+  const siteLogo = process.env.NEXT_PUBLIC_DOMAIN + "/speaker.svg";
   return (
     <Html>
       <Head />
-      <Preview>Dropbox reset your password</Preview>
+      <Preview>{`You’re on the waitlist for ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Preview>
       <Body style={main}>
         <Container style={container}>
           <Img
             style={img}
-            src={`/speaker.svg`}
-            width="120"
-            height="33"
-            alt="Dropbox"
+            src={process.env.NEXT_PUBLIC_LOGO || siteLogo}
+            width="100"
+            height="100"
+            alt="Logo"
           />
           <Section>
-            <Text style={text}>Hi ,</Text>
+            <Text
+              style={text}
+            >{`Big welcome and thanks for subscribing ${process.env.NEXT_PUBLIC_SITE_NAME}`}</Text>
             <Text style={text}>
-              Someone recently requested a password change for your Dropbox
-              account. If this was you, you can set a new password here:
+              🚀 The mission is to send out a stylish and simple newsletter that
+              help busy creatives to stay updated without cluttering their
+              inbox.
             </Text>
             <Text style={text}>
-              If you don&apos;t want to change your password or didn&apos;t
-              request this, just ignore and delete this message.
+              🛳 All new AI resources and tools are carefully curated, with only
+              a handful of the best being shipped.
             </Text>
-            <Text style={text}>
-              To keep your account secure, please don&apos;t forward this email
-              to anyone. See our Help Center for{" "}
-              <Link style={anchor} href="http://localhost:3000/unsubscribe">
-              unsubscribe here.
-              </Link>
-            </Text>
-            <Text style={text}>Happy Dropboxing!</Text>
+            <Text style={text}>Expect a new shipment every Tuesday!</Text>
           </Section>
         </Container>
       </Body>

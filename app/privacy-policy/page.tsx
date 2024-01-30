@@ -1,10 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Speaker from "/public/speaker.svg";
-import Twitter from "/public/twitter.svg";
-import Github from "/public/github.svg";
-import Linkedin from "/public/linkedin.svg";
 
 const PrivacyPolicyPage = () => {
   return (
@@ -12,15 +7,12 @@ const PrivacyPolicyPage = () => {
       <div className="max-w-screen-lg border-[1.5px] border-[#F0E4D2] mx-auto relative">
         <div className="flex flex-col items-center p-4 md:p-12">
           <div className="text-center mb-4 lg:mb-6">
-            <h1 className="text-3xl md:text-[55px] font-semibold leading-none md:leading-tight">
+            <h1 className="text-2xl md:text-[55px] font-semibold leading-none md:leading-tight">
               Privacy Policy
             </h1>
           </div>
           <p className="text-black/40 font-normal mb-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
-            quos ex tenetur accusamus nisi consectetur nam iure ducimus
-            voluptatum dolores ullam eveniet, odio numquam non voluptatem dolor
-            delectus perspiciatis aspernatur.
+            {process.env.NEXT_PUBLIC_PRIVACY || "Add Privacy Policy From ENV"}
           </p>
           <Link
             href="/"

@@ -2,6 +2,7 @@
 import React, { useTransition } from "react";
 import Mail from "/public/mail.svg";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 const EmailForm = () => {
   const [isPending, startTransaction] = useTransition();
@@ -14,18 +15,19 @@ const EmailForm = () => {
 
     startTransaction(async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/resend", {
+        const res = await fetch("/api/resend", {
           method: "POST",
           body: JSON.stringify({ email }),
           headers: { "Content-Type": "application/json" },
         });
 
         if (res.ok) {
-          const result = await res.json();
+          // const result = await res.json();
           target.reset();
-          console.log(result);
+          toast.success("Thank you for subscribing 🎉");
         } else {
           console.error("Error:", res.status, res.statusText);
+          toast.error("Something went wrong");
         }
       } catch (error) {
         console.error("Fetch error:", error);
