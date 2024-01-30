@@ -37,9 +37,9 @@ export const EmailTemplate = () => {
             <Text style={text}>
               To keep your account secure, please don&apos;t forward this email
               to anyone. See our Help Center for{" "}
-              {/* <Link style={anchor} href="https://dropbox.com">
-                more security tips.
-              </Link> */}
+              <Link style={anchor} href="http://localhost:3000/unsubscribe">
+              unsubscribe here.
+              </Link>
             </Text>
             <Text style={text}>Happy Dropboxing!</Text>
           </Section>

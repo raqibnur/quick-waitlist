@@ -22,6 +22,7 @@ const EmailForm = () => {
 
         if (res.ok) {
           const result = await res.json();
+          target.reset();
           console.log(result);
         } else {
           console.error("Error:", res.status, res.statusText);
@@ -49,6 +50,7 @@ const EmailForm = () => {
         />
       </div>
       <button
+        disabled={isPending}
         type="submit"
         className="bg-black text-white px-2.5 py-1.5 rounded-md text-base transition-all duration-200 hover:bg-black/60"
       >

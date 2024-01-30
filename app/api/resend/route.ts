@@ -15,6 +15,10 @@ export async function POST(req: Response) {
       to: [body.email],
       subject: siteName as string,
       react: EmailTemplate(),
+      headers: {
+        'List-Unsubscribe': '<mailto:unsubscribe@aihunts.com?subject=Unsubscribe>, <http://localhost:3000/unsubscribe>',
+        'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click'
+      }
     });
 
     const addContact = await resend.contacts.create({
