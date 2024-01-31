@@ -1,5 +1,6 @@
 import { EmailTemplate } from "@/components/EmailTemplate";
 import { Resend } from "resend";
+import { NextRequest, NextResponse } from "next/server";
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 const fromEmail = process.env.NEXT_PUBLIC_FROM_EMAIL;
@@ -9,7 +10,7 @@ const siteUrl = process.env.NEXT_PUBLIC_DOMAIN;
 const unsubscribeUrl = `${siteUrl}/unsubscribe`;
 const subject = `You’re on the waitlist for ${siteName}`;
 
-export async function POST(req: Response) {
+export async function POST(req: NextRequest) {
   const body = await req.json();
   try {
     const sendEmail = await resend.emails.send({
@@ -29,11 +30,11 @@ export async function POST(req: Response) {
       audienceId: audienceId as string,
     });
 
-    return Response.json({
+    return NextResponse.json({
       sendEmail,
       addContact,
     });
   } catch (error) {
-    return Response.json({ error });
+    return NextResponse.json({ error });
   }
 }

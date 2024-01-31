@@ -1,33 +1,39 @@
 import Image from "next/image";
-import Speaker from "/public/speaker.svg";
-import Twitter from "/public/twitter.svg";
+import { Toaster } from "react-hot-toast";
 import Github from "/public/github.svg";
 import Linkedin from "/public/linkedin.svg";
-import { Toaster } from "react-hot-toast";
+import Speaker from "/public/speaker.svg";
+import Twitter from "/public/twitter.svg";
 
-import Link from "next/link";
 import EmailForm from "@/components/EmailForm";
+import Link from "next/link";
 
 export default function Home() {
+  // Data from env
+  const siteLogo = process.env.NEXT_PUBLIC_LOGO || Speaker;
+  const Title = process.env.NEXT_PUBLIC_HERO_TITLE || "We are coming Soon";
+  const Subtitle = process.env.NEXT_PUBLIC_HERO_SUBTITLE || "Stay tuned";
+  const LinkedinLink =
+    process.env.NEXT_PUBLIC_LINKEDIN || "https://www.linkedin.com/";
+  const TwitterLink = process.env.NEXT_PUBLIC_TWITTER || "https://www.x.com/";
+  const GithubLink =
+    process.env.NEXT_PUBLIC_GITHUB || "https://www.github.com/";
+
   return (
     <>
       <section className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 px-2">
         <div className="max-w-screen-lg mx-auto relative border-[1.5px] border-[#F0E4D2]">
           <div className="w-full flex flex-col items-center p-4 md:p-20">
             <div className="w-20 md:w-28 h-20 md:h-28 relative">
-              <Image
-                src={process.env.NEXT_PUBLIC_LOGO || Speaker}
-                alt="speaker"
-                fill
-              />
+              <Image src={siteLogo} alt="speaker" fill />
             </div>
             {/* Heading */}
             <div className="text-center mb-4 lg:mb-6">
               <h1 className="text-4xl  py-2 md:text-[55px] font-semibold leading-none md:leading-tight">
-                {process.env.NEXT_PUBLIC_HERO_TITLE || "We are coming Soon"}
+                {Title}
               </h1>
               <p className="text-lg md:text-[26px] text-black/30 font-normal">
-                {process.env.NEXT_PUBLIC_HERO_SUBTITLE || "Stay tuned"}
+                {Subtitle}
               </p>
             </div>
             {/* Form */}
@@ -45,27 +51,13 @@ export default function Home() {
             </div>
             {/* Social Media */}
             <div className="flex gap-2 mt-6">
-              <Link
-                href={
-                  process.env.NEXT_PUBLIC_LINKEDIN ||
-                  "https://www.linkedin.com/"
-                }
-                className="relative w-[22px] h-[22px]"
-              >
+              <Link href={LinkedinLink} className="relative w-[22px] h-[22px]">
                 <Image src={Linkedin} alt="Linkedin" fill />
               </Link>
-              <Link
-                href={process.env.NEXT_PUBLIC_TWITTER || "https://www.x.com/"}
-                className="relative w-[22px] h-[22px]"
-              >
+              <Link href={TwitterLink} className="relative w-[22px] h-[22px]">
                 <Image src={Twitter} alt="Twitter" fill />
               </Link>
-              <Link
-                href={
-                  process.env.NEXT_PUBLIC_GITHUB || "https://www.github.com/"
-                }
-                className="relative w-[22px] h-[22px]"
-              >
+              <Link href={GithubLink} className="relative w-[22px] h-[22px]">
                 <Image src={Github} alt="Github" fill />
               </Link>
             </div>
