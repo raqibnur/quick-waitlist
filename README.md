@@ -1,6 +1,6 @@
 # Quick Waitlist
 
-![Quick Waitlist Cover](https://i.ibb.co/nsQgkmw/og.png)
+![Quick Waitlist Cover](https://repository-images.githubusercontent.com/749803152/3b10a59a-5183-45bf-8f91-c2ce4f999364)
 
 **Quick Waitlist** is an open-source "coming soon" and waiting list page for SaaS platforms and websites. This project empowers you to collect email addresses from prospective customers with ease. Built using Next.js 14, and integrated with [Resend](https://resend.com/) for email management, Quick Waitlist offers a user-friendly and SEO-optimized solution to ignite the launch of any product or service.
 
