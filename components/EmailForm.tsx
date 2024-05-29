@@ -48,13 +48,13 @@ const EmailForm = () => {
           name="email"
           id="email"
           placeholder="Join our waiting list..."
-          className="lg:w-[300px] py-1.5 px-2.5 rounded-md text-base border border-[#D0D5DD] pl-8"
+          className="lg:w-[300px] py-2 px-3 rounded-md text-base pl-8 shadow-button-shadow border bg-white/50 focus-visible:outline-none focus-visible:bg-white"
         />
       </div>
       <button
         disabled={isPending}
         type="submit"
-        className="bg-black text-white px-2.5 py-1.5 rounded-md text-base transition-all duration-200 hover:bg-black/60"
+        className="bg-gradient-to-b from-white to-[#f8eedb] text-[#482307] shadow-button-shadow font-semibold px-2.5 py-1.5 rounded-md text-base transition-all duration-200 "
       >
         Subscribe
       </button>
