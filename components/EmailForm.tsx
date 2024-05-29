@@ -47,6 +47,7 @@ const EmailForm = () => {
           type="email"
           name="email"
           id="email"
+          required
           placeholder="Join our waiting list..."
           className="lg:w-[300px] py-2 px-3 rounded-md text-base pl-8 shadow-button-shadow border bg-white/50 focus-visible:outline-none focus-visible:bg-white"
         />
