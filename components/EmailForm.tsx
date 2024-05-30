@@ -12,6 +12,9 @@ const EmailForm = () => {
     const target = event.target as HTMLFormElement;
     const form = new FormData(target);
     const email = form.get("email");
+    if (!email) {
+      return null;
+    }
 
     startTransaction(async () => {
       try {
@@ -22,7 +25,6 @@ const EmailForm = () => {
         });
 
         if (res.ok) {
-          // const result = await res.json();
           target.reset();
           toast.success("Thank you for subscribing 🎉");
         } else {
@@ -35,7 +37,10 @@ const EmailForm = () => {
     });
   };
   return (
-    <form onSubmit={(e) => handleSubmit(e)} className="flex gap-2">
+    <form
+      onSubmit={(e) => handleSubmit(e)}
+      className="flex justify-center items-center gap-2"
+    >
       <div className="relative">
         <label
           htmlFor="email"
@@ -55,7 +60,7 @@ const EmailForm = () => {
       <button
         disabled={isPending}
         type="submit"
-        className="bg-gradient-to-b from-white to-[#f8eedb] text-[#482307] shadow-button-shadow font-semibold px-2.5 py-1.5 rounded-md text-base transition-all duration-200 "
+        className="bg-gradient-to-b from-white to-[#f8eedb] text-[#482307] shadow-button-shadow font-semibold py-2 px-3 rounded-md text-base transition-all duration-200 "
       >
         Subscribe
       </button>
