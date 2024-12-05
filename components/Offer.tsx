@@ -16,6 +16,11 @@ const CardHeader = ({
     <div className="p-5 divide-y divide-[#F0E4D2]">
       <div className="space-y-6 pb-5">
         <div className="space-y-2">
+          {price && discount && (
+            <div className="text-orange-500 font-medium">
+              Limited Time Offer
+            </div>
+          )}
           <h2 className="md:text-2xl text-xl font-semibold">{title}</h2>
         </div>
 

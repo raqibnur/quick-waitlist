@@ -1,6 +1,5 @@
-import Image from "next/image";
+import { Github, Linkedin, X } from "lucide-react";
 import Link from "next/link";
-import { Linkedin, X, Github } from "lucide-react";
 const LinkedinLink =
   process.env.NEXT_PUBLIC_LINKEDIN || "https://www.linkedin.com/";
 const TwitterLink = process.env.NEXT_PUBLIC_TWITTER || "https://www.x.com/";
