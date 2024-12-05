@@ -26,6 +26,8 @@ export async function POST(req: NextRequest) {
 
     const addContact = await resend.contacts.create({
       email: body.email,
+      firstName: body.firstName,
+      lastName: body.lastName,
       unsubscribed: false,
       audienceId: audienceId as string,
     });

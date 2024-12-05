@@ -1,3 +1,7 @@
+# Project Title
+
+A brief description of what this project does and who it's for
+
 # Quick Waitlist
 
 ![Quick Waitlist Cover](https://repository-images.githubusercontent.com/749803152/3b10a59a-5183-45bf-8f91-c2ce4f999364)
@@ -17,7 +21,7 @@ Authored by [@raqibnur](https://github.com/Raqibnur), Quick Waitlist is here to 
 
 ## Getting Started
 
-To launch Quick Waitlist for your project, please follow these steps:
+To run on local Quick Waitlist for your project, please follow these steps:
 
 1. Clone the repository:
 
@@ -29,7 +33,7 @@ To launch Quick Waitlist for your project, please follow these steps:
 
    ```sh
    cd quick-waitlist
-   npm install
+   yarn
    ```
 
 3. Configure environment variables:
@@ -39,19 +43,28 @@ To launch Quick Waitlist for your project, please follow these steps:
      cp .env.example .env.local
      ```
    - Fill in the environment variables in `.env.local` with your Resend API Key and Audience ID:
+
      ```
-     NEXT_PUBLIC_RESEND_API_KEY=<Your Resend API Key>
-     NEXT_PUBLIC_AUDIENCE_ID=<Your Audience ID>
-     NEXT_PUBLIC_SITE_NAME=
-     NEXT_PUBLIC_DOMAIN=
-     NEXT_PUBLIC_LOGO=
-     NEXT_PUBLIC_FROM_EMAIL=
-     NEXT_PUBLIC_LINKEDIN=""
-     NEXT_PUBLIC_TWITTER=""
-     NEXT_PUBLIC_GITHUB=""
-     NEXT_PUBLIC_HERO_TITLE=
-     NEXT_PUBLIC_HERO_SUBTITLE=
-     NEXT_PUBLIC_PRIVACY=
+      NEXT_PUBLIC_RESEND_API_KEY=<Resend API Key>
+      NEXT_PUBLIC_AUDIENCE_ID=<Resend Audience ID>
+      NEXT_PUBLIC_SITE_NAME=
+      NEXT_PUBLIC_SITE_DESCRIPTION=
+      NEXT_PUBLIC_DOMAIN=
+      NEXT_PUBLIC_LOGO_UR=<Logo URL>
+      NEXT_PUBLIC_FROM_EMAIL=
+
+      NEXT_PUBLIC_LINKEDIN=
+      NEXT_PUBLIC_TWITTER=
+      NEXT_PUBLIC_GITHUB=""
+
+      NEXT_PUBLIC_LAUNCH_DATE=
+      NEXT_PUBLIC_TITLE=
+      NEXT_PUBLIC_OFFER_TITLE=
+      NEXT_PUBLIC_CURRENT_PRICE=<Optional>
+      NEXT_PUBLIC_DISCOUNT_PRICE=<Optional>
+      NEXT_PUBLIC_FEATURES=
+      NEXT_PUBLIC_PRIVACY=<Privacy policy text>
+
      ```
 
 4. Start the development server:
@@ -62,13 +75,17 @@ To launch Quick Waitlist for your project, please follow these steps:
 
    Visit [http://localhost:3000](http://localhost:3000) in your browser to see the application in action.
 
-5. Deploy your Quick Waitlist page to Vercel with just one click:
+## One Click Install
 
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRaqibnur%2Fquick-waitlist&project-name=quick-waitlist&repository-name=quick-waitlist&demo-title=Quick%20Waitlist&demo-description=Quick%20Waitlist%20and%20coming%20soon%20page%20for%20your%20SAAS%20and%20website.&demo-url=https%3A%2F%2Fquick-waitlist.vercel.app&demo-image=https%3A%2F%2Fi.ibb.co%2FnsQgkmw%2Fog.png)
+Deploy your Quick Waitlist page to Vercel with just one click. Click the deploy button, paste the environment variables, and set their values.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FRaqibnur%2Fquick-waitlist&project-name=quick-waitlist&repository-name=quick-waitlist&demo-title=Quick%20Waitlist&demo-description=Quick%20Waitlist%20and%20coming%20soon%20page%20for%20your%20SAAS%20and%20website.&demo-url=https%3A%2F%2Fquick-waitlist.vercel.app&demo-image=https%3A%2F%2Fi.ibb.co%2FnsQgkmw%2Fog.png)
 
 ## Customizing Email Templates
 
-To customize the email templates sent through Resend using React Email, please refer to their documentation here: [React Email Documentation](https://react.email/docs/introduction)
+![Quick Waitlist Cover](https://res.cloudinary.com/dyv1yduua/image/upload/v1733390826/CleanShot_2024-12-05_at_15.24.30_vbzyi5.png)
+
+To modify the email templates, navigate to `/components/EmailTemplate.tsx` For additional information, please refer to the [React Email Documentation](https://react.email/docs/introduction)
 
 ## Contributing
 

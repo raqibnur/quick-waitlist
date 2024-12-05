@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useTransition } from "react";
 
 const UnsubscribePage = () => {
@@ -7,11 +8,14 @@ const UnsubscribePage = () => {
   const handleSubmit = () => {
     startTransaction(async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/resend", {
-          method: "POST",
-          body: JSON.stringify(""),
-          headers: { "Content-Type": "application/json" },
-        });
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_DOMAIN}/api/resend`,
+          {
+            method: "POST",
+            body: JSON.stringify(""),
+            headers: { "Content-Type": "application/json" },
+          }
+        );
 
         if (res.ok) {
           const result = await res.json();
