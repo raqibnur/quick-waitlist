@@ -1,7 +1,3 @@
-# Project Title
-
-A brief description of what this project does and who it's for
-
 # Quick Waitlist
 
 ![Quick Waitlist Cover](https://repository-images.githubusercontent.com/749803152/3b10a59a-5183-45bf-8f91-c2ce4f999364)
@@ -75,7 +71,7 @@ To run on local Quick Waitlist for your project, please follow these steps:
 
    Visit [http://localhost:3000](http://localhost:3000) in your browser to see the application in action.
 
-## One Click Install
+## One Click Install 🎉
 
 Deploy your Quick Waitlist page to Vercel with just one click. Click the deploy button, paste the environment variables, and set their values.
 
