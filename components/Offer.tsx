@@ -26,8 +26,8 @@ const CardHeader = ({
 
         {price && discount && (
           <div className="inline-block bg-gray-200 rounded-lg px-3 py-1">
-            <span className="text-xl font-semibold">${price}</span>{" "}
-            <span className="text-gray-500">instead of ${discount}</span>
+            <span className="text-xl font-semibold">${discount}</span>{" "}
+            <span className="text-gray-500">instead of ${price}</span>
           </div>
         )}
         <div className="border-t border-[#F0E4D2]"></div>
