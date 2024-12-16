@@ -1,0 +1,8 @@
+services:
+  
+  waitlist.certbot:
+    image: certbot/certbot
+    volumes: 
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    command: certonly --webroot -w /var/www/certbot --force-renewal --email work@wesendemail.online -d wesendemail.online --agree-tos
