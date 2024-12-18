@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    waitlist.fe:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      ports:
+        - 3005:3005
+      deploy:
+        resources:
+          limits:
+            memory: 3584M

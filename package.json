@@ -1,5 +1,5 @@
 {
-  "name": "comming-soon",
+  "name": "dns4",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,8 +14,10 @@
     "@react-email/components": "^0.0.19",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "handlebars": "^4.7.8",
     "lucide-react": "^0.465.0",
     "next": "^14.2.3",
+    "nodemailer": "^6.9.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
